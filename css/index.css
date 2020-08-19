@@ -35,6 +35,7 @@ form{
     width: 500px;
     margin: auto;
     color: white;
+    border-radius: 10px;
 }
 form label{
     float: left;
