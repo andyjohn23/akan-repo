@@ -3,6 +3,7 @@ function validateform(){
     var yearofbirth = document.myform.yearofbirth.value;
     var monthofbirth = document.myform.monthofbirth.value;
     var dateofbirth = document.myform.dateofbirth.value;
+    var gender= document.myForm.gender.value;
     var current_year=new Date().getFullYear();
 
     if((yearofbirth == "") || (yearofbirth.length !=4) || 
@@ -11,20 +12,17 @@ function validateform(){
         document.myForm.yearofbirth.focus() ;
         return false;
 
-    }else if(monthofbirth == "" || monthofbirth.length !=2 || 
-            monthofbirth >=1 || monthofbirth.value <=12) {
-            alert("please provide a valid month of birth e.g 1-12");
+    }else if(monthofbirth == "" || monthofbirth.length !=2 || monthofbirth > 12) {
+            alert("please provide a valid month of birth between 1-12");
             document.myForm.monthofbirth.focus() ;
             return false;
 
-    }else if(dateofbirth == "" || dateofbirth.length !=2 || 
-            dateofbirth >=1 || dateofbirth <=31) {
-            alert("please provide a valid date of birth e.g 1-31");
+    }else if(dateofbirth == "" || dateofbirth.length !=2 || dateofbirth > 31) {
+            alert("please provide a valid date of birth between 1-31");
             document.myForm.dateofbirth.focus() ;
             return false;
 
-    }else if(gender[0], checked == false && gender[1], checked == false){
-        document.myForm.gender.focus() ;
+    }else if(gender[0].checked==false && gender[1].checked==false){
             alert("you must choose gender");
     }else{
         return true;
