@@ -32,3 +32,15 @@ function validateform(){
         return true;
     }
 }
+
+function dayValueCalculation(){
+    yearofbirth = document.getElementById("yearofbirth").value;
+
+    CC = parseInt(yearofbirth.substring(0,2));
+    YY = parseInt(yearofbirth.substring(2,4));
+    MM = parseInt(document.getElementById("monthofbirth").value);
+    DD = parseInt(document.getElementById("dateofbirth").value);
+    dayOfWeek = (((CC/4)-2*CC-1)+((5*YY/4))+ ((26*(MM +1)/10))+DD)%7;
+    console.log(dayOfWeek);
+    return(math.floor(dayOfWeek));
+}
