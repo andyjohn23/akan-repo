@@ -3,7 +3,7 @@ function validateform(){
     var yearofbirth = document.myform.yearofbirth.value;
     var monthofbirth = document.myform.monthofbirth.value;
     var dateofbirth = document.myform.dateofbirth.value;
-    var gender= document.myForm.gender.value;
+    var gender= document.getElementsByName("gender");
     var current_year=new Date().getFullYear();
 
     if((yearofbirth == "") || (yearofbirth.length !=4) || 
