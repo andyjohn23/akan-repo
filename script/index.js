@@ -7,7 +7,7 @@ function validateform(){
     var yearofbirth = document.myform.yearofbirth.value;
     var monthofbirth = document.myform.monthofbirth.value;
     var dateofbirth = document.myform.dateofbirth.value;
-    var gender= document.getElementsByName("gender");
+    var chooseGender= document.getElementsByName("gender");
     var current_year=new Date().getFullYear();
 
     if((yearofbirth == "") || (yearofbirth.length !=4) || 
@@ -26,7 +26,7 @@ function validateform(){
             document.myform.dateofbirth.focus() ;
             return false;
 
-    }else if(gender[0].checked==false && gender[1].checked==false){
+    }else if(chooseGender[0].checked==false && chooseGender[1].checked==false){
             alert("you must choose gender");
     }else{
         return true;
@@ -40,16 +40,16 @@ function dayValueCalculation(){
     YY = parseInt(yearofbirth.substring(2,4));
     MM = parseInt(document.getElementById("monthofbirth").value);
     DD = parseInt(document.getElementById("dateofbirth").value);
-    dayOfWeek = (((CC/4)-2*CC-1)+((5*YY/4))+ ((26*(MM +1)/10))+DD)%7;
+    dayOfWeek = (((CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM +1 )/10) ) + DD)%7;
     console.log(dayOfWeek);
-    return(math.floor(dayOfWeek));
+    return (Math.floor(dayOfWeek));
 }
 
 function genderGet(){
-    var gender = document.getElementsByName("gender");
-    if(gender[0].checked == true){
+    var chooseGender = document.getElementsByName("gender");
+    if(chooseGender[0].checked == true){
         var gender = "male";
-    }else if(gender[1].checked == true){
+    }else if(chooseGender[1].checked == true){
         var gender = "female";
     }else{
         return false;
@@ -58,39 +58,39 @@ function genderGet(){
         case "male":
         
         if(valueOfDay == 1){
-            alert("You were born on " + days[0] + " and your akan name is " + maleName[0]);
+            alert("You were born on " +days[0]+ " and your akan name is " +maleName[0]);
         }else if(valueOfDay == 2){
-            alert("You were born on " + days[1] + " and your akan name is " + maleName[1]);
+            alert("You were born on " +days[1]+ " and your akan name is " +maleName[1]);
         }else if(valueOfDay == 3){
-            alert("You were born on " + days[2] + " and your akan name is " + maleName[2]);
+            alert("You were born on " +days[2]+ " and your akan name is " +maleName[2]);
         }else if(valueOfDay == 4){
-            alert("You were born on " + days[3] + " and your akan name is " + maleName[3]);
+            alert("You were born on " +days[3]+ " and your akan name is " +maleName[3]);
         }else if(valueOfDay == 5){
-            alert("You were born on " + days[4] + " and your akan name is " + maleName[4]);
+            alert("You were born on " +days[4]+ " and your akan name is " +maleName[4]);
         }else if(valueOfDay == 6){
-            alert("You were born on " + days[5] + " and your akan name is " + maleName[5]);
+            alert("You were born on " +days[5]+ " and your akan name is " +maleName[5]);
         }else if(valueOfDay == -0){
-            alert("You were born on " + days[6] + " and your akan name is " + maleName[6]);
+            alert("You were born on " +days[6]+ " and your akan name is " +maleName[6]);
         }
         break
         case "female":
             if(valueOfDay == 1){
-                alert("You were born on " + days[0] + " and your akan name is " + femaleName[0]);
+                alert("You were born on " +days[0]+ " and your akan name is " +femaleName[0]);
             }else if(valueOfDay == 2){
-                alert("You were born on " + days[1] + " and your akan name is " + femaleName[1]);
+                alert("You were born on " +days[1]+ " and your akan name is " +femaleName[1]);
             }else if(valueOfDay == 3){
-                alert("You were born on " + days[2] + " and your akan name is " + femaleName[2]);
+                alert("You were born on " +days[2]+ " and your akan name is " +femaleName[2]);
             }else if(valueOfDay == 4){
-                alert("You were born on " + days[3] + " and your akan name is " + femaleName[3]);
+                alert("You were born on " +days[3]+ " and your akan name is " +femaleName[3]);
             }else if(valueOfDay == 5){
-                alert("You were born on " + days[4] + " and your akan name is " + femaleName[4]);
+                alert("You were born on " +days[4]+ " and your akan name is " +femaleName[4]);
             }else if(valueOfDay == 6){
-                alert("You were born on " + days[5] + " and your akan name is " + femaleName[5]);
+                alert("You were born on " +days[5]+ " and your akan name is " +femaleName[5]);
             }else if(valueOfDay == -0){
-                alert("You were born on " + days[6] + " and your akan name is " + femaleName[6]);
+                alert("You were born on " + days[6]+ " and your akan name is " +femaleName[6]);
             }
-            break
-            default:
+        break
+         default:
     }
 }
 
