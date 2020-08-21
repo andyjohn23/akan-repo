@@ -72,5 +72,29 @@ function genderGet(){
         }else if(valueOfDay == -0){
             alert("You were born on " + days[6] + " and your akan name is " + maleName[6]);
         }
+        break
+        case "female":
+            if(valueOfDay == 1){
+                alert("You were born on " + days[0] + " and your akan name is " + femaleName[0]);
+            }else if(valueOfDay == 2){
+                alert("You were born on " + days[1] + " and your akan name is " + femaleName[1]);
+            }else if(valueOfDay == 3){
+                alert("You were born on " + days[2] + " and your akan name is " + femaleName[2]);
+            }else if(valueOfDay == 4){
+                alert("You were born on " + days[3] + " and your akan name is " + femaleName[3]);
+            }else if(valueOfDay == 5){
+                alert("You were born on " + days[4] + " and your akan name is " + femaleName[4]);
+            }else if(valueOfDay == 6){
+                alert("You were born on " + days[5] + " and your akan name is " + femaleName[5]);
+            }else if(valueOfDay == -0){
+                alert("You were born on " + days[6] + " and your akan name is " + femaleName[6]);
+            }
+            break
+            default:
     }
+}
+
+function findName(){
+    valueOfDay = dayValueCalculation();
+    genderGet();
 }
