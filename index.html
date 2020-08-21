@@ -25,7 +25,7 @@
 <body class="container">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-sm-4 col-lg-12 page-header">
+            <div class="col-md-12 col-sm-12 col-lg-12 page-header">
                 <div class="heading text-center">
                     <a href="#"><img src="images/logo.png" alt="logo"></a>
                     <h1>Welcome to Akan Names</h1>
@@ -38,8 +38,8 @@
     <div class="text-center">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-sm-6 col-lg-12">
-                    <form action="" class="form-group">
+                <div class="col-md-12 col-sm-12 col-lg-12">
+                    <form action="" method="POST" class="form-group" name="myform" onsubmit="return validateform()">
                         <label for="yearofbirth">Year of birth:</label><br>
                         <input type="number" id="yearofbirth" placeholder="Year of Birth" name="yearofbirth"
                             class="form-control"><br>
@@ -55,7 +55,7 @@
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select><br>
-                        <button type="button" class="btn btn-primary">Submit</button>
+                        <button  type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>
