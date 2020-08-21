@@ -26,75 +26,47 @@ function validateform(){
             document.myform.dateofbirth.focus() ;
             return false;
 
-    }else if(chooseGender[0].checked==false && chooseGender[1].checked==false){
+    }else if(chooseGender == ""){
             alert("you must choose gender");
+            return false;
     }else{
         return true;
     }
 }
 
 function dayValueCalculation(){
-    yearofbirth = document.getElementById("yearofbirth").value;
-
-    CC = parseInt(yearofbirth.substring(0,2));
-    YY = parseInt(yearofbirth.substring(2,4));
+    var yearofbirth = document.getElementById("yearofbirth").value;
+    
+    CC = parseInt(yearofbirth.slice(0,2));
+    YY = parseInt(yearofbirth.slice(2,4));
     MM = parseInt(document.getElementById("monthofbirth").value);
     DD = parseInt(document.getElementById("dateofbirth").value);
-    dayOfWeek = (((CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM +1 )/10) ) + DD)%7;
-    console.log(dayOfWeek);
-    return (Math.floor(dayOfWeek));
+    dayOfWeek = Math.floor((((CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM +1 )/10) ) + DD)%7);
+    return dayOfWeek;
+    
 }
 
-function genderGet(){
+function getGender(){
     var chooseGender = document.getElementsByName("gender");
-    if(chooseGender[0].checked == true){
-        var gender = "male";
-    }else if(chooseGender[1].checked == true){
-        var gender = "female";
+    if(chooseGender==0){
+        gender = "male";
+    }else if(chooseGender==1){
+        gender = "female";
     }else{
         return false;
     }
-    switch(gender){
-        case "male":
-        
-        if(valueOfDay == 1){
-            alert("You were born on " +days[0]+ " and your akan name is " +maleName[0]);
-        }else if(valueOfDay == 2){
-            alert("You were born on " +days[1]+ " and your akan name is " +maleName[1]);
-        }else if(valueOfDay == 3){
-            alert("You were born on " +days[2]+ " and your akan name is " +maleName[2]);
-        }else if(valueOfDay == 4){
-            alert("You were born on " +days[3]+ " and your akan name is " +maleName[3]);
-        }else if(valueOfDay == 5){
-            alert("You were born on " +days[4]+ " and your akan name is " +maleName[4]);
-        }else if(valueOfDay == 6){
-            alert("You were born on " +days[5]+ " and your akan name is " +maleName[5]);
-        }else if(valueOfDay == -0){
-            alert("You were born on " +days[6]+ " and your akan name is " +maleName[6]);
-        }
-        break
-        case "female":
-            if(valueOfDay == 1){
-                alert("You were born on " +days[0]+ " and your akan name is " +femaleName[0]);
-            }else if(valueOfDay == 2){
-                alert("You were born on " +days[1]+ " and your akan name is " +femaleName[1]);
-            }else if(valueOfDay == 3){
-                alert("You were born on " +days[2]+ " and your akan name is " +femaleName[2]);
-            }else if(valueOfDay == 4){
-                alert("You were born on " +days[3]+ " and your akan name is " +femaleName[3]);
-            }else if(valueOfDay == 5){
-                alert("You were born on " +days[4]+ " and your akan name is " +femaleName[4]);
-            }else if(valueOfDay == 6){
-                alert("You were born on " +days[5]+ " and your akan name is " +femaleName[5]);
-            }else if(valueOfDay == -0){
-                alert("You were born on " + days[6]+ " and your akan name is " +femaleName[6]);
-            }
-        break
-         default:
-    }
 }
 
-function findName(){
-    valueOfDay = dayValueCalculation();
-    genderGet();
+function akanFinder(){
+    var dayValue = dayValueCalculation ();
+    var genderSelect = getGender();
+
+    if(genderSelect === "male"){
+        document.getElementById("answer").innerHTML=("You are a Male born on " +days[dayValue] +" and your Akan name is. " +maleName[dayValue]);
+      }else  if(genderSelect === "female"){
+        document.getElementById("answer").innerHTML=("You are a Male born on " +days[dayValue] +" and your Akan name is. " +femaleName[dayValue]);
+      }else{
+            document.getElementById("answer").innerHTML=("Check your details");
+     }
+         
 }
