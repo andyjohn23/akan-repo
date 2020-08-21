@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-lg-12">
-                    <form action="" method="POST" class="form-group" name="myform" onsubmit="return validateform()">
+                    <form class="form-group" name="myform" onsubmit="return validateform()">
                         <label for="yearofbirth">Year of birth:</label><br>
                         <input type="number" id="yearofbirth" placeholder="Year of Birth" name="yearofbirth"
                             class="form-control"><br>
@@ -49,13 +49,13 @@
                         <label for="dateofbirth">Date of birth:</label><br>
                         <input type="number" id="dateofbirth" placeholder="Date of Birth" name="dateofbirth"
                             class="form-control"><br>
-                        <label for="gender">Gender:</label><br>
+                        <label for="monthofbirth">Gender:</label><br>
                         <select name="gender" id="gender" class="form-control" required>
                             <option value="" disabled selected>Choose Gender</option>
                             <option name="gender" id="male" value="male">Male</option>
                             <option name="gender" id="female" value="female">Female</option>
                         </select><br>
-                        <button  type="submit" class="btn btn-primary">Submit</button>
+                        <button  type="submit" class="btn btn-primary" onclick="findName();">Submit</button>
                     </form>
                 </div>
             </div>
