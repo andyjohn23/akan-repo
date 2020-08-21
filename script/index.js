@@ -1,3 +1,8 @@
+var CC, YY, MM, DD, dayOfWeek, valueOfDay;
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var maleName = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kwasi", "Kwasi"];
+var femaleName = ["Akosua", "Adwea", "Abenna", "Akua", "Yaa", "Afua", "Ama"];
+
 function validateform(){
     var yearofbirth = document.myform.yearofbirth.value;
     var monthofbirth = document.myform.monthofbirth.value;
