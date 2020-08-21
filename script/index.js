@@ -44,3 +44,33 @@ function dayValueCalculation(){
     console.log(dayOfWeek);
     return(math.floor(dayOfWeek));
 }
+
+function genderGet(){
+    var gender = document.getElementsByName("gender");
+    if(gender[0].checked == true){
+        var gender = "male";
+    }else if(gender[1].checked == true){
+        var gender = "female";
+    }else{
+        return false;
+    }
+    switch(gender){
+        case "male":
+        
+        if(valueOfDay == 1){
+            alert("You were born on " + days[0] + " and your akan name is " + maleName[0]);
+        }else if(valueOfDay == 2){
+            alert("You were born on " + days[1] + " and your akan name is " + maleName[1]);
+        }else if(valueOfDay == 3){
+            alert("You were born on " + days[2] + " and your akan name is " + maleName[2]);
+        }else if(valueOfDay == 4){
+            alert("You were born on " + days[3] + " and your akan name is " + maleName[3]);
+        }else if(valueOfDay == 5){
+            alert("You were born on " + days[4] + " and your akan name is " + maleName[4]);
+        }else if(valueOfDay == 6){
+            alert("You were born on " + days[5] + " and your akan name is " + maleName[5]);
+        }else if(valueOfDay == -0){
+            alert("You were born on " + days[6] + " and your akan name is " + maleName[6]);
+        }
+    }
+}
