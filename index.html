@@ -41,7 +41,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-lg-12">
-                    <form class="form-group" name="myform" id="form" onsubmit="validation();">
+                    <form class="form-group" value="refresh" name="myform" id="form" onsubmit="validation();">
                         <label for="yearofbirth">Year of birth:</label><br>
                         <input type="number" id="yearofbirth" placeholder="Year of Birth" name="yearofbirth"
                             class="form-control"><br>
@@ -59,6 +59,7 @@
                         </select><br>
                         <button type="submit" class="btn btn-primary" onclick="akanFinder();">Submit</button>
                     </form>
+                    <div id="result-table"></div>
                 </div>
             </div>
 

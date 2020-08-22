@@ -9,19 +9,16 @@ function validation(){
     (yearofbirth < 1900) || ( yearofbirth > current_year)) {
             swal("Please provide a valid year of birth between 1900-2020");
             event.preventDefault(); 
-            document.myform.yearofbirth.focus() ;
             return false;
 
-    }else if(monthofbirth == "" || monthofbirth.length !=2 || monthofbirth > 12) {
-            swal("Please provide a valid month of birth between 01-12");
+    }else if(monthofbirth == "" || monthofbirth.length >2 || monthofbirth > 12) {
+            swal("Please provide a valid month of birth between 1-12");
             event.preventDefault();
-            document.myform.monthofbirth.focus() ;
             return false;
 
-    }else if(dateofbirth == "" || dateofbirth.length !=2 || dateofbirth > 31) {
-            swal("Please provide a valid date of birth between 01-31");
+    }else if(dateofbirth == "" || dateofbirth.length >2 || dateofbirth > 31) {
+            swal("Please provide a valid date of birth between 1-31");
             event.preventDefault();
-            document.myform.dateofbirth.focus() ;
             return false;
 
     }else if(chooseGender == ""){
