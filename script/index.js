@@ -76,8 +76,6 @@ function akanFinder(){
         alert("you were born on " +days[6]+ " and your akan name is " +maleName[6]);
       } else if (gender == "2" && result == 6) {
         alert("you were born on " +days[6]+ " and your akan name is " +femaleName[6]);
-      }else {
-        alert("null");
       }
     
 }
