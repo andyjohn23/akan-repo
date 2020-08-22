@@ -9,9 +9,10 @@ they were born.
 [Andrew John](https://andyjohn23.github.io/portfolio-repo/)
 
 ## SNEAK PEAK
-[landing page](images/akan.jpg)
+<img src="images/akan.jpg" width="800px" height="400px">
 
-[AKAN](andyjohn23.github.io/akan-repo/)
+
+[AKAN](https://andyjohn23.github.io/akan-repo/)
 
 ## SETUP INSTRUCTIONS
 
@@ -43,5 +44,5 @@ the week you were born and your Akan name.
 For any queries contact [andrewnick906@gmail.com]
 
 ## LICENSE AND COPYRIGHT
-*  ** MIT LICENSE **
+* MIT LICENSE
 * Copyright@2020 Andrew John 
