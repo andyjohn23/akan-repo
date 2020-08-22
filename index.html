@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-lg-12">
-                    <form class="form-group" name="myform" onsubmit="return validateform()">
+                    <form class="form-group" name="myform" id="form" onsubmit="validation();">
                         <label for="yearofbirth">Year of birth:</label><br>
                         <input type="number" id="yearofbirth" placeholder="Year of Birth" name="yearofbirth"
                             class="form-control"><br>
@@ -52,14 +52,12 @@
                         <label for="gender">Gender:</label><br>
                         <select name="gender" id="gender" class="form-control">
                             <option value="" disabled selected>Choose Gender</option>
-                            <option name="gender" id="male" value="0">Male</option>
-                            <option name="gender" id="female" value="1">Female</option>
+                            <option name="gender"  value="1">Male</option>
+                            <option name="gender" value="2">Female</option>
                         </select><br>
-                        <button  type="submit" class="btn btn-primary" onclick="akanFinder()">Submit</button><br>
-                        <div class="result_box">
-                            <h5 id="answer"></h5>
+                        <button  type="submit" class="btn btn-primary" onclick="akanFinder();">Submit</button>
                     </form>
-                   
+                   <div id="result-table"></div>
                 </div>
             </div>
 
