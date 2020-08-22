@@ -7,22 +7,26 @@ function validation(){
     
     if((yearofbirth == "") || (yearofbirth.length !=4) || 
     (yearofbirth < 1900) || ( yearofbirth > current_year)) {
-        alert("please provide a valid year of birth between 1900-2020");
-        document.myform.yearofbirth.focus() ;
-        return false;
+            swal("Please provide a valid year of birth between 1900-2020");
+            event.preventDefault(); 
+            document.myform.yearofbirth.focus() ;
+            return false;
 
     }else if(monthofbirth == "" || monthofbirth.length !=2 || monthofbirth > 12) {
-            alert("please provide a valid month of birth between 01-12");
+            swal("Please provide a valid month of birth between 01-12");
+            event.preventDefault();
             document.myform.monthofbirth.focus() ;
             return false;
 
     }else if(dateofbirth == "" || dateofbirth.length !=2 || dateofbirth > 31) {
-            alert("please provide a valid date of birth between 01-31");
+            swal("Please provide a valid date of birth between 01-31");
+            event.preventDefault();
             document.myform.dateofbirth.focus() ;
             return false;
 
     }else if(chooseGender == ""){
-            alert("you must choose gender");
+            swal("You must choose a gender");
+            event.preventDefault();
             return false;
     }else{
         return true;
@@ -49,33 +53,47 @@ function akanFinder(){
     var result=day(century,year,month,date).toFixed(); 
 
     if (gender == "1" && result == 0) {
-        alert("you were born on " +days[0]+ " and your akan name is " +maleName[0]);
+        swal("you were born on " +days[0]+ " and your akan name is " +maleName[0]);
+        event.preventDefault();
       } else if (gender == "2" && result == 0) {
-        alert("you were born on " +days[0]+ " and your akan name is " +femaleName[0]);
+        swal("you were born on " +days[0]+ " and your akan name is " +femaleName[0]);
+        event.preventDefault();
       }else if (gender == "1" && result == 1) {
-        alert("you were born on " +days[1]+ " and your akan name is " +maleName[1]);
+        swal("you were born on " +days[1]+ " and your akan name is " +maleName[1]);
+        event.preventDefault();
       } else if (gender == "2" && result == 1) {
-        alert("you were born on " +days[1]+ " and your akan name is " +femaleName[1]);
+        swal("you were born on " +days[1]+ " and your akan name is " +femaleName[1]);
+        event.preventDefault();
       }else if (gender == "1" && result == 2) {
-        alert("you were born on " +days[2]+ " and your akan name is " +maleName[2]);
+        swal("you were born on " +days[2]+ " and your akan name is " +maleName[2]);
+        event.preventDefault();
       } else if (gender == "2" && result == 2) {
-        alert("you were born on " +days[2]+ " and your akan name is " +femaleName[2]);
+        swal("you were born on " +days[2]+ " and your akan name is " +femaleName[2]);
+        event.preventDefault();
       }else if (gender == "1" && result == 3) {
-        alert("you were born on " +days[3]+ " and your akan name is " +maleName[3]);
+        swal("you were born on " +days[3]+ " and your akan name is " +maleName[3]);
+        event.preventDefault();
       } else if (gender == "2" && result == 3) {
-        alert("you were born on " +days[3]+ " and your akan name is " +femaleName[3]);
+        swal("you were born on " +days[3]+ " and your akan name is " +femaleName[3]);
+        event.preventDefault();
       }else if (gender == "1" && result == 4) {
-        alert("you were born on " +days[4]+ " and your akan name is " +maleName[4]);
+        swal("you were born on " +days[4]+ " and your akan name is " +maleName[4]);
+        event.preventDefault();
       } else if (gender == "2" && result == 4) {
-        alert("you were born on " +days[4]+ " and your akan name is " +femaleName[4]);
+        swal("you were born on " +days[4]+ " and your akan name is " +femaleName[4]);
+        event.preventDefault();
       }else if (gender == "1" && result == 5) {
-        alert("you were born on " +days[5]+ " and your akan name is " +maleName[5]);
+        swal("you were born on " +days[5]+ " and your akan name is " +maleName[5]);
+        event.preventDefault();
       } else if (gender == "2" && result == 5) {
-        alert("you were born on " +days[5]+ " and your akan name is " +femaleName[5]);
+        swal("you were born on " +days[5]+ " and your akan name is " +femaleName[5]);
+        event.preventDefault();
       }else if (gender == "1" && result == 6) {
-        alert("you were born on " +days[6]+ " and your akan name is " +maleName[6]);
+        swal("you were born on " +days[6]+ " and your akan name is " +maleName[6]);
+        event.preventDefault();
       } else if (gender == "2" && result == 6) {
-        alert("you were born on " +days[6]+ " and your akan name is " +femaleName[6]);
+        swal("you were born on " +days[6]+ " and your akan name is " +femaleName[6]);
+        event.preventDefault();
       }
     
 }
