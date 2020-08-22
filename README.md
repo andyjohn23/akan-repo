@@ -6,7 +6,7 @@ naming system of the Ghanians, depending on the day of the of the week
 they were born.
 
 ## AUTHOR
-[Andrew John](andyjohn23.github.io/portfolio-repo/.)
+[Andrew John](https://andyjohn23.github.io/portfolio-repo/)
 
 ## SNEAK PEAK
 [landing page](images/akan.jpg)
