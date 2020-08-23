@@ -1,3 +1,7 @@
+function formReset(){
+  document.getElementById("form").reset();
+}
+
 function validation(){
     var yearofbirth = document.myform.yearofbirth.value;
     var monthofbirth = document.myform.monthofbirth.value;
@@ -92,5 +96,6 @@ function akanFinder(){
         swal("you were born on " +days[6]+ " and your akan name is " +femaleName[6]);
         event.preventDefault();
       }
+      
     
 }
